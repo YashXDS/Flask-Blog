@@ -1,0 +1,23 @@
+{
+    "params": 
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/ai_adventures",
+        "prod_uri": "mysql://root:@localhost/ai_adventures",
+        "fb_uri": "https://facebook.com/ai_adventures",
+        "github_uri": "https://github.com/YashXDS",
+        "x_uri": "https://twitter.com/ai_adventures",
+        "title_name": "ML ENGINEER",
+        "blog_name": "MY BLOG",
+        "blog_title": "AI Adventures",
+        "blog_des": "From Pixels to Predictions",
+        "gmail-user": "yapatel7761@gmail.com",
+        "gmail-password": "Pyash@99",
+        "about_me": "I am Yash Patel, professional Machine Learning Engineer.",
+        "about_project": "This is my first IoT project which is based on Smart Waste Management System.",
+        "no_of_posts": 3,
+        "admin_name": "yapatel7761@gmail.com",
+        "admin_password": "Pyash@99",
+        "file_path" : "C:\\Users\\yapat\\UPLOADS"
+    }
+}

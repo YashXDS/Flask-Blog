@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}   
+{% block body %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('/static/img/home-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h2> ADMIN DASHBOARD </h2>
+                            <span class="subheading"> Manage posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    <h1>Admin Axons</h1>
+                    <a href="/admin"><button class= "btn btn-primary text-uppercase">Admin Portal</button></a>
+                    <a href="/logout"><button class= "btn btn-primary text-uppercase">Logout</button></a><hr>
+                    <h1>Edit Posts</h1>
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN" action="/edit/{{post.index}}" method="post">
+                        <div class="form-floating">
+                            <input class="form-control" id="title" name="title" type="text" placeholder="Enter your title here..."  value = "{{post.title}}"/>
+                            <label>Title</label>
+                            <div class="invalid-feedback"  data-sb-feedback="name:required">A title is required.</div>
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="tagline" name="tagline" type="text" placeholder="Enter your tagline here..."  value = "{{post.tagline}}"/>
+                            <label>Tagline</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">A tagline is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Tagline is not valid.</div>
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="slug" name="slug" type="text" placeholder="Enter your slug here..." value = "{{post.slug}}" />
+                            <label>Slug</label>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="content" name="content" type="text" placeholder="Enter your content here..." style="height: 12rem">{{post.content}}</textarea>
+                            <label>Content</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A content is required.</div>
+                        </div>
+
+                        <br />
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                To activate this form, sign up at
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <!-- Submit Button-->
+                        <button class="btn btn-primary" id="sendMessageButton" type="submit">Send</button>
+                    </form>
+                </div>      
+            </div>
+        </div>
+{% endblock %}
